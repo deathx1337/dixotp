@@ -62,7 +62,7 @@ def main():
         }
         
         try:
-            response = requests.post('https://6s.live6s.liv/api/bt/v2_1/user/getVerifyCodeByContactType', headers=headers, json=json_data)
+            response = requests.post('https://6s.live/api/bt/v2_1/user/getVerifyCodeByContactType', headers=headers, json=json_data)
             response_data = response.json()
             api_status = response_data.get('status')
             msg = response_data.get('message')
@@ -100,4 +100,5 @@ def switch():
     exit(0)
 
 switch()
+
 main()
